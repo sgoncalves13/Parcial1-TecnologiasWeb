@@ -46,6 +46,10 @@ function Home() {
         return <Navigate to="/Perfil" />;
       }
 
+      if(selectedimg === true){
+        return <Navigate to="/Detalle" />;
+      }
+
   return (
   <div className="perfil">
     <div className="user">
@@ -58,7 +62,6 @@ function Home() {
     <p>post 201</p>
     <p>followers 1002</p>
     <p>following 654</p>
-    {selectedimg && <Imgdetail img={"https://picsum.photos/350"} />}
     </div>
     <div className="fotosperfil">
         <img onClick={() => mostrarDetalle()} className ="foto" src="https://picsum.photos/350" alt="imgperfil" />
