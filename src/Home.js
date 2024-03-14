@@ -62,17 +62,17 @@ function Home() {
     </div>
     <div className="fotosperfil">
         <img onClick={() => mostrarDetalle()} className ="foto" src="https://picsum.photos/350" alt="imgperfil" />
-        <img className ="foto" src="https://picsum.photos/350" alt="imgperfil" />
-        <img className ="foto" src="https://picsum.photos/350" alt="imgperfil" />
-        <img className ="foto" src="https://picsum.photos/350" alt="imgperfil" />
-        <img className ="foto" src="https://picsum.photos/350" alt="imgperfil" />
-        <img className ="foto" src="https://picsum.photos/350" alt="imgperfil" />
-        <img className ="foto" src="https://picsum.photos/350" alt="imgperfil" />
-        <img className ="foto" src="https://picsum.photos/350" alt="imgperfil" />
-        <img className ="foto" src="https://picsum.photos/350" alt="imgperfil" />
-        <img className ="foto" src="https://picsum.photos/350" alt="imgperfil" />
-        <img className ="foto" src="https://picsum.photos/350" alt="imgperfil" />
-        <img className ="foto" src="https://picsum.photos/350" alt="imgperfil" />
+        <img onClick={() => mostrarDetalle()} className ="foto" src="https://picsum.photos/350" alt="imgperfil" />
+        <img onClick={() => mostrarDetalle()} className ="foto" src="https://picsum.photos/350" alt="imgperfil" />
+        <img onClick={() => mostrarDetalle()} className ="foto" src="https://picsum.photos/350" alt="imgperfil" />
+        <img onClick={() => mostrarDetalle()} className ="foto" src="https://picsum.photos/350" alt="imgperfil" />
+        <img onClick={() => mostrarDetalle()} className ="foto" src="https://picsum.photos/350" alt="imgperfil" />
+        <img onClick={() => mostrarDetalle()} className ="foto" src="https://picsum.photos/350" alt="imgperfil" />
+        <img onClick={() => mostrarDetalle()} className ="foto" src="https://picsum.photos/350" alt="imgperfil" />
+        <img onClick={() => mostrarDetalle()} className ="foto" src="https://picsum.photos/350" alt="imgperfil" />
+        <img onClick={() => mostrarDetalle()} className ="foto" src="https://picsum.photos/350" alt="imgperfil" />
+        <img onClick={() => mostrarDetalle()} className ="foto" src="https://picsum.photos/350" alt="imgperfil" />
+        <img onClick={() => mostrarDetalle()} className ="foto" src="https://picsum.photos/350" alt="imgperfil" />
     </div>
   </div>
   );
