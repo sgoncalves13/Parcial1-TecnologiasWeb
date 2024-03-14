@@ -1,9 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Home.js"
+import Perfil from './Perfil.js';
 function App() {
   return (
-  <div></div>
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/Perfil" element={<Perfil />} />
+    </Routes>
+  </BrowserRouter>
   );
 }
 
