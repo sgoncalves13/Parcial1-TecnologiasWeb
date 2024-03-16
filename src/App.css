@@ -1,15 +1,8 @@
-.perfil  {
-  text-align: center;
-}
-
-.user img {
-  border-radius: 100%;
-}
-
-.imguser{
-  border-radius: 100%;
-  width: 150px;
-  height: 150px;
+.cargando {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
 }
 
 .fotosperfil {
@@ -23,15 +16,184 @@
   height: 380px;
   margin: 10px;
   padding: 10px;
-  border: 1px solid #ccc;
   border-radius: 5px;
   text-align: left;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
+  transition: filter 0.3s ease;
+}
+
+.foto:hover {
+  filter: brightness(70%);
 }
 
 .detalleperfil {
-  padding-top: 100px;
+  display: flex; /* Habilita Flexbox */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; 
+  background-image: url("https://img.freepik.com/vector-premium/fondo-azul-degradado_23-2149338378.jpg");
+  background-size: cover; /* Asegura que la imagen de fondo cubra completamente el área del contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+  background-position: center center; /* Centra la imagen de fondo */
+}
+
+.formulario{
+    width: 70%;
+    height: 80%;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    margin-bottom: 5%;
+    margin-top: 5%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.detalleusuario {
+  padding-left: 20%;
+}
+
+.imgdetalle{
   text-align: center;
-  padding-bottom: 100px;
+}
+
+.button {
+  text-align: center;
+}
+
+.imguser{
+  width: 120px; /* Tamaño de la imagen. Asegúrate de ajustarlo según tus necesidades */
+  height:120px; /* Mantiene la proporción de la imagen */
+  border-radius: 100%; /* Opcional: crea un efecto de imagen circular */
+  object-fit: cover; /* Asegura que la imagen cubra el espacio asignado sin distorsionarse */
+}
+
+.user {
+  display: flex;
+  align-items: center; /* Centra los elementos verticalmente */
+  gap: 20px; /* Espacio entre la imagen y la información del usuario */
+}
+
+.imgperfil img{
+  width: 250px; /* Tamaño de la imagen. Asegúrate de ajustarlo según tus necesidades */
+  height: 250px; /* Mantiene la proporción de la imagen */
+  border-radius: 100%; /* Opcional: crea un efecto de imagen circular */
+  object-fit: cover; /* Asegura que la imagen cubra el espacio asignado sin distorsionarse */
+  cursor: pointer;
+}
+
+.imgperfil {
+  margin-left: 60px; /* Ajusta este valor según sea necesario */
+  position: relative;
+  display: inline-block;
+}
+
+.imgperfil::after {
+  border-radius: 100%; /* Esto hará que el efecto sea circular */
+  content: "Ver perfil"; /* Puedes usar un icono aquí en lugar de texto */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 99%;
+  background: rgba(0, 0, 0, 0.5); /* Capa oscura para mejorar la visibilidad del texto */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none; /* Evita que el ::after capture clics */
+}
+
+.imgperfil:hover::after {
+  opacity: 1;
+}
+
+.user-info {
+  padding-top: 5px;
+  padding-left: 90px;
+  display: flex;
+  flex-direction: column; /* Alinea la información del usuario verticalmente */
+}
+
+.numeros {
+  display: flex;
+  justify-content: space-around; /* Distribuye el espacio uniformemente alrededor de los elementos */
+  align-items: center; /* Centra los elementos verticalmente */
+  gap: 10px; /* Espacio entre los elementos, ajusta según necesidades */
+}
+
+.espacio {
+  height: 30px;
+  align-items: center;
+}
+
+hr {
+  border: none; /* Elimina el borde predeterminado */
+  height: 2px; /* Establece el grosor de la línea */
+  background-color: #ccc; /* Color de la línea */
+  margin: 40px auto; /* Añade espacio arriba y abajo de la línea y centra horizontalmente */
+  width: 90%; /* Reduce el ancho del hr y lo centra */
+}
+
+
+.nombre {
+  font-weight: bold;
+}
+
+.username {
+  color: rgb(110, 110, 110);
+}
+
+
+.inputusuario {
+  width: 70%; /* Ocupa el ancho total de su contenedor padre */
+  padding: 10px; /* Espaciado interno para que sea más grande y fácil de interactuar */
+  margin: 5px 0; /* Agrega un poco de espacio arriba y abajo del input */
+  border: 1px solid #ccc; /* Borde sutil */
+  border-radius: 5px; /* Esquinas ligeramente redondeadas */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra interna para darle profundidad */
+  font-size: 16px; /* Tamaño de fuente legible */
+  line-height: 1.5; /* Altura de línea para que el texto dentro del input no esté muy apretado */
+  color: #333; /* Color del texto */
+  background-color: #f8f8f8; /* Color de fondo sutil para el input */
+  outline: none; /* Remueve el borde que aparece al enfocar el input */
+  transition: border-color 0.3s; /* Transición suave para el color del borde al enfocar */
+}
+
+.button button {
+  padding: 10px 20px; /* Espaciado interno para que el botón sea más grande y cómodo de pulsar */
+  font-size: 16px; /* Tamaño de fuente grande y legible */
+  font-weight: bold; /* Hace que el texto sea en negritas */
+  color: white; /* Color del texto */
+  background-color: #007bff; /* Color de fondo azul */
+  border: none; /* Elimina el borde predeterminado */
+  border-radius: 5px; /* Redondea las esquinas del botón */
+  cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+  outline: none; /* Elimina el contorno que se muestra al hacer clic */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra ligera para darle profundidad */
+}
+
+.detalleimagen{
+  text-align: center;
+  padding-bottom: 50px;
+  padding-top: 20px;
+}
+
+.imgdetail {
+  height: 500px;
+  width: 500px;
+  border: 5px solid rgb(149, 149, 149); /* Añade un borde negro de 2px de grosor */
+}
+
+.info{
+  width: 70%;
+  margin: 10px 0; /* Espacio arriba y abajo para separar cada dato */
+  padding: 8px 12px; /* Espaciado interno para cada etiqueta p */
+  background-color: #f8f8f8; /* Fondo claro para destacar el texto */
+  border-left: 3px solid #333; /* Borde izquierdo para un efecto distintivo */
+  font-size: 16px; /* Tamaño de la fuente legible */
+  color: #333; /* Color oscuro para el texto */
+  line-height: 1.6; /* Espaciado de línea para mejorar la legibilidad */
+  border-radius: 4px; /* Esquinas ligeramente redondeadas */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
 }
