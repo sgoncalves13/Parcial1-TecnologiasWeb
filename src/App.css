@@ -172,6 +172,9 @@ hr {
   outline: none; /* Elimina el contorno que se muestra al hacer clic */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra ligera para darle profundidad */
 }
+.button {
+  padding-top: 20px;
+}
 
 .detalleimagen{
   text-align: center;
