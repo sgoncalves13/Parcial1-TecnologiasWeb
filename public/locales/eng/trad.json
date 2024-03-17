@@ -1,0 +1,15 @@
+{
+    "tittle": "Welcome to my app {{name}}",
+    "Website" : "Website",
+    "Posts": "Posts",
+    "Followers": "Followers",
+    "Following": "Following",
+    "Username": "Username",
+    "Name": "Full Name",
+    "Description": "Profile Description",
+    "URL": "Personal Website URL",
+    "DetailImg": "Image Details",
+    "Return": "Go back",
+    "Save": "Save Changes",
+    "Loading": "Loading..."
+}

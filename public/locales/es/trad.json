@@ -1,0 +1,15 @@
+{
+    "tittle": "Bievenido a mi app {{name}}",
+    "Website" : "Sitio Web",
+    "Posts": "Publicaciones",
+    "Followers": "Seguidores",
+    "Following": "Seguidos",
+    "Username": "Nombre de usuario",
+    "Name": "Nombre Completo",
+    "Description": "Descripción de perfil",
+    "URL": "URL de la página personal",
+    "DetailImg": "Detalle de la imagen",
+    "Return": "Volver",
+    "Save": "Guardar cambios",
+    "Loading": "Cargando..."
+}

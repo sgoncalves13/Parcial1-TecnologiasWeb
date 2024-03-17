@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Home.js"
 import Perfil from './Perfil.js';
 import Imgdetail from './Imgdetail.js';
+
 function App() {
   return (
   <BrowserRouter>

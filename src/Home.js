@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
-import Imgdetail from "./Imgdetail"
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
+import { Suspense } from 'react';
 
 
 function Home() {
@@ -11,6 +12,12 @@ function Home() {
    const [GoPerfil, setGoPerfil] = useState(false);
 
    const [selectedimg, setSelectedImg] = useState(false);
+
+   const {t, i18n} = useTranslation(["trad"])
+
+   const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
 
         useEffect(() => {
         async function fetchUsers() {
@@ -40,10 +47,8 @@ function Home() {
     };
 
     if (user === null){
-      return <div className="cargando"><strong>Cargando...</strong></div>
+      return <div className="cargando"><strong>{t("Loading")}</strong></div>
     }
-    
-      
     
     if (GoPerfil === true){
         return <Navigate to="/Perfil" />;
@@ -54,20 +59,23 @@ function Home() {
     }
 
   return (
+    <Suspense>
   <div className="perfil">
    <div className="user">
    <div className="imgperfil">
       <img onClick={handleNext} src="https://picsum.photos/350" alt="Perfil del usuario" />
   </div>
   <div className="user-info">
+  <button className="ENG" onClick={() => changeLanguage("eng")}>ENGLISH</button>
+  <button className="ESP" onClick={() => changeLanguage("es")}>ESPAÑOL</button>
     <h1 className="username">{user.Username}</h1>
     <p className="nombre">{user.FirstName} {user.LastName}</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <p>My website: <Link to={user.website}>{user.website}</Link></p>
+    <p>{t("Website")}: <Link to={user.website}>{user.website}</Link></p>
     <div className="numeros">
-    <p><strong>201</strong> posts</p>
-    <p><strong>1002</strong> followers</p>
-    <p><strong>654</strong> following</p>
+    <p><strong>12</strong> {t("Posts")}</p>
+    <p><strong>1002</strong> {t("Followers")}</p>
+    <p><strong>654</strong> {t("Following")}</p>
     </div>
   </div>
 </div>
@@ -87,6 +95,8 @@ function Home() {
         <img onClick={() => mostrarDetalle("https://picsum.photos/363")} className ="foto" src="https://picsum.photos/363" alt="imgperfil" />
     </div>
   </div>
+    </Suspense>
+  
   );
 }
 
